@@ -1,0 +1,24 @@
+{
+  "name": "fes-vue",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shefcompsoc/fes-vue.git"
+  },
+  "author": "Rob Ede <robjtede@icloud.com> (https://robjte.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shefcompsoc/fes-vue/issues"
+  },
+  "homepage": "https://github.com/shefcompsoc/fes-vue#readme"
+}
