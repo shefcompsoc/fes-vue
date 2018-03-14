@@ -1,8 +1,9 @@
+const byId = (a, b) => {
+  return a.id < b.id ? -1 : 1
+}
+
 const todoItem = Vue.extend({
   props: ['todo'],
-  data: {
-    checked: 'todo.done'
-  },
   template: `
     <div class="todo-item" :class="{ done: todo.done }">
       <label>
@@ -54,12 +55,12 @@ const app = new Vue({
   computed: {
     filteredTodos: function() {
       if (this.filter === 'complete') {
-        return this.todos.filter(x => x.done)
+        return this.todos.filter(x => x.done).sort(byId)
       } else if (this.filter === 'incomplete') {
-        return this.todos.filter(x => !x.done)
+        return this.todos.filter(x => !x.done).sort(byId)
       } else {
         // no filter
-        return this.todos
+        return this.todos.sort(byId)
       }
     }
   },
@@ -69,6 +70,19 @@ const app = new Vue({
     },
     setFilter: function (filter) {
       this.filter = filter
+    },
+    addTodo: function (event) {
+      event.preventDefault()
+      const $form = event.target
+      const $text = $form.querySelector('input[type="text"]')
+      
+      this.todos.push({
+        id: this.todos.length + 1,
+        text: $text.value,
+        done: false
+      })
+      
+      $text.value = ""
     }
   }
 })

@@ -11,9 +11,9 @@
   <div id="app">
     <h1>Welcome to {{ title }}</h1>
     
-    <form>
+    <form @submit="addTodo">
       <input type="text" placeholder="What to do?">
-      <input type="button" value="Add Todo">
+      <input type="submit" value="Add Todo">
     </form>
     
     <div class="filters">
