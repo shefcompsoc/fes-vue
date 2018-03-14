@@ -4,16 +4,28 @@
   <title>FES - Vue</title>
 
   <meta charset="utf-8">
-
 </head>
 <body>
   <div id="app">
-    Welcome to {{ title }}
-
-    <todo-list :todos="todos"></todo-list>
+    <h1>Welcome to {{ title }}</h1>
+    
+    <form>
+      <input type="text" placeholder="What to do?">
+      <input type="button" value="Add Todo">
+    </form>
+    
+    <div class="filters">
+      <button>All</button>
+      <button>Complete</button>
+      <button>Incomplete</button>
+    </div>
+    
+    <hr>
+    
+    <todo-list :todos="filteredTodos"></todo-list>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./vue.js"></script>
   <script src="./index.js"></script>
 </body>
 </html>
