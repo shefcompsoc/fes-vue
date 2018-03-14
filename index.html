@@ -4,6 +4,8 @@
   <title>FES - Vue</title>
 
   <meta charset="utf-8">
+  
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div id="app">
@@ -22,7 +24,7 @@
     
     <hr>
     
-    <todo-list :todos="filteredTodos"></todo-list>
+    <todo-list :todos="filteredTodos" @mark="markAs"></todo-list>
   </div>
 
   <script src="./vue.js"></script>
