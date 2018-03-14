@@ -66,6 +66,9 @@ const app = new Vue({
   methods: {
     markAs: function (todo) {
       this.todos.find(x => x.id === todo.id).done = todo.done
+    },
+    setFilter: function (filter) {
+      this.filter = filter
     }
   }
 })

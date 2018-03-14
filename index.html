@@ -17,9 +17,9 @@
     </form>
     
     <div class="filters">
-      <button>All</button>
-      <button>Complete</button>
-      <button>Incomplete</button>
+      <button @click="setFilter('none')">All</button>
+      <button @click="setFilter('complete')">Complete</button>
+      <button @click="setFilter('incomplete')">Incomplete</button>
     </div>
     
     <hr>
